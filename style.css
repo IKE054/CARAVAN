@@ -19,16 +19,29 @@ a {
   clear: both;
 }
 
+header, nav, h2, .main-visual, footer {
+	font-family: Chalkduster, "Bradley Hand", Courier, "Segoe Print", sans-serif;
+}
+
 /*ヘッダー部分*/
 header {
+	position: relative;/* #socialの絶対位置指定の基準位置を変更する */
 	width: 90%;
 	padding: 15px 0;
 	margin: 0 auto;
 	text-align: center;
-/*	background-color: red;*/
 }
 	header .headline{
 		font-size: 32px;
+	}
+	.social {
+		position: absolute;/* .headerの左上を基準に位置を指定する */
+		top: 22px;/* .headerの左上から22px下に移動 */
+		right: 22px;/* .headerの右上から22px下に移動 */
+	}
+	.social i {
+		display: inline-block;
+		margin-left: 20px;
 	}
 	.nav-list {
 		text-align: center;
@@ -39,8 +52,7 @@ header {
 		list-style: none;
 		display: inline-block;
 		margin: 0 20px;
-/*		background-color: red;
-*/	}
+	}
 
 /*メインビジュアル部分*/
 .main-visual {
